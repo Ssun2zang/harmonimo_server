@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/harmonimo.iml" filepath="$PROJECT_DIR$/.idea/harmonimo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/harmonimo_server.iml" filepath="$PROJECT_DIR$/.idea/harmonimo_server.iml" />
     </modules>
   </component>
 </project>
