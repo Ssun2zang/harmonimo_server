@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57d8e974-13c3-4e97-baba-af59b01102bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Disease.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/DiseaseUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/DiseaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/repository/DiseaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/DiseaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/test/java/marimo/harmonimo/repository/DiseaseRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/test/java/marimo/harmonimo/service/DiseaseServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/harmonimo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/HarmonimoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/HarmonimoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Disease.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Disease.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/DiseaseUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/harmonimo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +35,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/harmonimo">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -49,8 +56,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -72,7 +80,9 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Haisely/Desktop/Spring/hello-spring"
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/Haisely/Desktop/harmonimo_server"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -82,11 +92,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Haisely\Desktop\harmonimo_server\harmonimo" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="marimo.harmonimo.domain" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="marimo.harmonimo.repository" />
+      <recent name="marimo.harmonimo.service" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HarmonimoApplication">
     <configuration name="HarmonimoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="marimo.harmonimo.HarmonimoApplication" />
       <module name="harmonimo.main" />
@@ -100,8 +117,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DiseaseRepositoryTest.findAll" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/harmonimo" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;marimo.harmonimo.repository.DiseaseRepositoryTest.findAll&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DiseaseRepositoryTest.findAll" />
         <item itemvalue="Application.HarmonimoApplication" />
       </list>
     </recent_temporary>

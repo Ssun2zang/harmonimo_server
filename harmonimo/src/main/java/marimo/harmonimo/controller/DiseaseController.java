@@ -1,5 +1,6 @@
 package marimo.harmonimo.controller;
-
+import marimo.harmonimo.domain.Disease;
+import marimo.harmonimo.service.DiseaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,11 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 @Controller
 @RestController
-public class UserController {
+public class DiseaseController {
+    private final DiseaseService diseaseService;
+    @Autowired
+    public DiseaseController(DiseaseService diseaseService) {
+        this.diseaseService = diseaseService;
+    }
 
-    @GetMapping("/custom")
-    public ResponseEntity<String> customResponse() {
-        String responseBody = "This is a custom response!";
-        return ResponseEntity.status(HttpStatus.OK).body(responseBody); // 상태 코드 200 OK와 JSON 바디만 반환
+    @GetMapping("/diseases")
+    public ResponseEntity<List<Disease>> GetDiseases() {
+        List<Disease> diseases = diseaseService.GetDiseases();
+        return ResponseEntity.status(HttpStatus.OK).body(diseases);
     }
 }

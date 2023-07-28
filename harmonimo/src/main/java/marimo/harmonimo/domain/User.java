@@ -1,11 +1,16 @@
 package marimo.harmonimo.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "Users")
+@Getter
+@Setter
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,27 +37,4 @@ public class User {
     private String password;
 
 
-    // 생성자, 게터 및 세터 등 필요한 메서드들 추가
-
-    // 기본 생성자
-    public User() {
-    }
-
-    // 생성자 (모든 필드)
-    public User(long userId, String name, String nickname, int gender, int old, String profileImg, String Id, String password) {
-        this.userId = userId;
-        this.name = name;
-        this.nickname = nickname;
-        this.gender = gender;
-        this.old = old;
-        this.profileImg = profileImg;
-        this.Id = Id;
-        this.password = password;
-    }
-
-    // 게터 및 세터 (getter and setter) 메서드들 추가
-
-    public long getUserId() {
-        return userId;
-    }
 }
