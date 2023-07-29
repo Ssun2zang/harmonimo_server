@@ -1,47 +1,29 @@
-package marimo.harmonimo.domain;
-
+package marimo.harmonimo.dto;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import marimo.harmonimo.dto.UserDTO;
+import lombok.ToString;
+import marimo.harmonimo.domain.User;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-
-@Entity
 @Getter
 @Setter
-@Table(name = "users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "userId")
-    private long userId;
-
-    @Column(name = "name")
+@NoArgsConstructor
+@ToString
+public class UserDTO {
+    private Long  userId;
     private String name;
-    @Column(name = "nickname")
     private String nickname;
-    @Column(name = "gender")
     private int gender;
-
-    @Column(name = "old")
     private int old;
-
-    @Column(name = "profileImg")
     private String profileImg;
-
-    @Column(name = "id")
     private String id;
-
-    @Column(name = "password")
     private String password;
 
-    public long getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -101,17 +83,19 @@ public class User {
         this.password = password;
     }
 
-    public static User toUserEntity(UserDTO userDTO){
-        User user = new User();
-        user.setUserId(userDTO.getUserId());
-        user.setName(userDTO.getName());
-        user.setNickname(userDTO.getNickname());
-        user.setGender(userDTO.getGender());
-        user.setOld(userDTO.getOld());
-        user.setProfileImg(userDTO.getProfileImg());
-        user.setId(userDTO.getId());
-        user.setPassword(userDTO.getPassword());
-        return user;
+    //lombok 어노테이션으로 getter,setter,생성자,toString 메서드 생략 가능
+
+    public static UserDTO toUserDTO(User user){
+        UserDTO userDTO = new UserDTO();
+        userDTO.setUserId(user.getUserId());
+        userDTO.setName(user.getName());
+        userDTO.setNickname(user.getNickname());
+        userDTO.setGender(user.getGender());
+        userDTO.setOld(user.getOld());
+        userDTO.setProfileImg(user.getProfileImg());
+        userDTO.setId(user.getId());
+        userDTO.setPassword(user.getPassword());
+        return userDTO;
     }
 
 
