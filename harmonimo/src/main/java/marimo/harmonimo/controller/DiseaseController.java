@@ -1,6 +1,7 @@
 package marimo.harmonimo.controller;
 import marimo.harmonimo.domain.Disease;
 import marimo.harmonimo.dto.Disease.DiseaseDTO;
+import marimo.harmonimo.dto.Disease.DiseaseListDTO;
 import marimo.harmonimo.service.DiseaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,8 +22,10 @@ public class DiseaseController {
     }
 
     @GetMapping("/diseases")
-    public ResponseEntity<List<Disease>> GetDiseases(@ModelAttribute Disease diseaseDTO) {
-        List<Disease> diseases = diseaseService.GetDiseases();
+    public ResponseEntity<DiseaseListDTO> GetDiseases() {
+        List<Disease> _diseases = diseaseService.GetDiseases();
+        DiseaseListDTO diseases = new DiseaseListDTO();
+        diseases.setDiseases(_diseases);
         return ResponseEntity.status(HttpStatus.OK).body(diseases);
     }
 }

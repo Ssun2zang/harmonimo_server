@@ -21,7 +21,6 @@ public class UserDTO {
 
     public static UserDTO toUserDTO(User user){
         UserDTO userDTO = new UserDTO();
-        userDTO.setUserId(user.getUserId());
         userDTO.setName(user.getName());
         userDTO.setNickname(user.getNickname());
         userDTO.setGender(user.getGender());

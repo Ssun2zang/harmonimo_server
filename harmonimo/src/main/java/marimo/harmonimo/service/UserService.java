@@ -20,7 +20,6 @@ public class UserService {
     public void save(UserRegisterDTO userRegisterDTO) {
         User userEntity = User.toUserEntity(userRegisterDTO);
         userRepository.save(userEntity);
-
     }
 
     public List<UserDTO> getUsers() { //entity객체는 service에서만

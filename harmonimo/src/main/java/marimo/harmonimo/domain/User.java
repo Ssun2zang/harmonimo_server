@@ -37,7 +37,6 @@ public class User {
 
     public static User toUserEntity(UserDTO userDTO){
         User user = new User();
-        user.setUserId(userDTO.getUserId());
         user.setName(userDTO.getName());
         user.setNickname(userDTO.getNickname());
         user.setGender(userDTO.getGender());
