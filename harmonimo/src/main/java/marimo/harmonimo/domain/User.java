@@ -2,11 +2,9 @@ package marimo.harmonimo.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import marimo.harmonimo.dto.UserDTO;
+import marimo.harmonimo.dto.User.UserDTO;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Getter
@@ -36,6 +34,19 @@ public class User {
 
     @Column(name = "password")
     private String password;
+
+    public static User toUserEntity(UserDTO userDTO){
+        User user = new User();
+        user.setUserId(userDTO.getUserId());
+        user.setName(userDTO.getName());
+        user.setNickname(userDTO.getNickname());
+        user.setGender(userDTO.getGender());
+        user.setOld(userDTO.getOld());
+        user.setProfileImg(userDTO.getProfileImg());
+        user.setId(userDTO.getId());
+        user.setPassword(userDTO.getPassword());
+        return user;
+    }
 
     public long getUserId() {
         return userId;
@@ -99,19 +110,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public static User toUserEntity(UserDTO userDTO){
-        User user = new User();
-        user.setUserId(userDTO.getUserId());
-        user.setName(userDTO.getName());
-        user.setNickname(userDTO.getNickname());
-        user.setGender(userDTO.getGender());
-        user.setOld(userDTO.getOld());
-        user.setProfileImg(userDTO.getProfileImg());
-        user.setId(userDTO.getId());
-        user.setPassword(userDTO.getPassword());
-        return user;
     }
 
 

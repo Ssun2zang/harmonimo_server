@@ -1,4 +1,4 @@
-package marimo.harmonimo.dto;
+package marimo.harmonimo.dto.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,9 +15,22 @@ public class UserDTO {
     private String nickname;
     private int gender;
     private int old;
-    private String profileImg;
+    private String profileImg = "url1";
     private String id;
     private String password;
+
+    public static UserDTO toUserDTO(User user){
+        UserDTO userDTO = new UserDTO();
+        userDTO.setUserId(user.getUserId());
+        userDTO.setName(user.getName());
+        userDTO.setNickname(user.getNickname());
+        userDTO.setGender(user.getGender());
+        userDTO.setOld(user.getOld());
+        userDTO.setProfileImg(user.getProfileImg());
+        userDTO.setId(user.getId());
+        userDTO.setPassword(user.getPassword());
+        return userDTO;
+    }
 
     public Long getUserId() {
         return userId;
@@ -85,18 +98,6 @@ public class UserDTO {
 
     //lombok 어노테이션으로 getter,setter,생성자,toString 메서드 생략 가능
 
-    public static UserDTO toUserDTO(User user){
-        UserDTO userDTO = new UserDTO();
-        userDTO.setUserId(user.getUserId());
-        userDTO.setName(user.getName());
-        userDTO.setNickname(user.getNickname());
-        userDTO.setGender(user.getGender());
-        userDTO.setOld(user.getOld());
-        userDTO.setProfileImg(user.getProfileImg());
-        userDTO.setId(user.getId());
-        userDTO.setPassword(user.getPassword());
-        return userDTO;
-    }
 
 
 }

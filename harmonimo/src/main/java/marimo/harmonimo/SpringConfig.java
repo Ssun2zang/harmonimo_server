@@ -18,13 +18,4 @@ public class SpringConfig {
         this.diseaseRepository = diseaseRepository;
     }
 
-//    @Bean
-//    public UserService userService() {
-//        return new UserService(userRepository);
-//    }
-
-    @Bean
-    public DiseaseService diseaseService() {
-        return new DiseaseService(diseaseRepository);
-    }
 }

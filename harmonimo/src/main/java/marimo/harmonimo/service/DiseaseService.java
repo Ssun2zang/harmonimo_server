@@ -2,11 +2,12 @@ package marimo.harmonimo.service;
 
 import marimo.harmonimo.domain.Disease;
 import marimo.harmonimo.repository.DiseaseRepository;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
-@Transactional
+@Service
 public class DiseaseService {
     private final DiseaseRepository diseaseRepository;
 
