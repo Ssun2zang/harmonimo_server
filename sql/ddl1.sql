@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS marimos (
     marimo_id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(128),
     user_id INTEGER,
     deco1 INTEGER,
     deco2 INTEGER,
@@ -98,18 +99,4 @@ CREATE TABLE IF NOT EXISTS disease_users (
     FOREIGN KEY (disease_id) REFERENCES diseases(disease_id)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-INSERT INTO diseases (disease_id, name) VALUES
-(1, '치매'),
-(2, '파킨슨 병'),
-(3, '결장, 직장암'),
-(4, '간암'),
-(5, '요추, 추간판 장애'),
-(6, '당뇨병'),
-(7, '무릎관절증'),
-(8, '고혈압성 질환'),
-(9, '대뇌혈관 질환'),
-(10, '기관지, 폐암'),
-(11, '위염'),
-(12, '치아 및 지지구조 질환'),
-(13, '급성 기관지염'),
-(14, '기타');
+

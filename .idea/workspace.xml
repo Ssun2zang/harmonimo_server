@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57d8e974-13c3-4e97-baba-af59b01102bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Disease_users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Disease/DiseaseListDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Log1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Log2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Log3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Marimo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/MarimoData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/DiseaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/DiseaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserRegisterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserRegisterDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/ddl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/ddl.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/ddl1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/ddl1.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
