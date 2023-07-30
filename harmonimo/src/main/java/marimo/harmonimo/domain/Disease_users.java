@@ -19,11 +19,13 @@ public class Disease_users {
     @Column
     private Long relationId;
 
-    @Column
-    private String userId;
+    @ManyToMany
+    @JoinColumn(name="userId")
+    private User user;
 
-    @Column
-    private String diseaseId;
+    @ManyToMany
+    @JoinColumn(name = "diseaseId")
+    private Disease disease;
 
 
 
@@ -35,19 +37,19 @@ public class Disease_users {
         this.relationId = relationId;
     }
 
-    public String getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public String getDiseaseId() {
-        return diseaseId;
+    public Disease getDisease() {
+        return disease;
     }
 
-    public void setDiseaseId(String diseaseId) {
-        this.diseaseId = diseaseId;
+    public void setDisease(Disease disease) {
+        this.disease = disease;
     }
 }

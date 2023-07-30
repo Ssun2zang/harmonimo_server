@@ -18,8 +18,9 @@ public class Marimo {
     @Column
     private String name;
 
-    @Column
-    private long userId;
+    @OneToOne
+    @JoinColumn(name="userId")
+    private User user;
 
     @Column
     private int deco1;

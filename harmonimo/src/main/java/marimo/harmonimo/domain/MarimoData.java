@@ -17,8 +17,9 @@ public class MarimoData {
     @Column
     private long dataId;
 
-    @Column
-    private long marimoId;
+    @ManyToOne
+    @JoinColumn(name="marimoId")
+    private Marimo marimo;
 
     @Column
     private long stat1;

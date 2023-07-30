@@ -18,8 +18,9 @@ public class Log2 {
     @Column
     private long logId;
 
-    @Column
-    private long marimoId;
+    @ManyToOne
+    @JoinColumn(name="marimoId")
+    private Marimo marimo;
 
     @Column
     private Timestamp timestamp;

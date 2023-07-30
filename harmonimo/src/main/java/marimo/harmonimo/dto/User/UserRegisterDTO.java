@@ -8,7 +8,6 @@ import java.util.List;
 @Data
 public class UserRegisterDTO extends UserDTO {
     private List<Long> diseases;
-    private Long marimoId;
 
     public List<Long> getDiseases() {
         return diseases;
