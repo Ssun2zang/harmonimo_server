@@ -20,7 +20,10 @@ public class UserController {
     @PostMapping("/register")
     public void register(@RequestBody UserRegisterDTO userRegisterDTO){
         userService.save(userRegisterDTO);
+        return;
     }
+
+
 
     @GetMapping("/users")
     public List<UserDTO> getUsers(@ModelAttribute UserDTO userDTO) {

@@ -1,5 +1,6 @@
 package marimo.harmonimo.controller;
 import marimo.harmonimo.domain.Disease;
+import marimo.harmonimo.domain.DiseaseUser;
 import marimo.harmonimo.dto.Disease.DiseaseDTO;
 import marimo.harmonimo.dto.Disease.DiseaseListDTO;
 import marimo.harmonimo.service.DiseaseService;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 @Controller
 @RestController
@@ -27,5 +29,11 @@ public class DiseaseController {
         DiseaseListDTO diseases = new DiseaseListDTO();
         diseases.setDiseases(_diseases);
         return ResponseEntity.status(HttpStatus.OK).body(diseases);
+    }
+
+    @GetMapping("/diseaseUser")
+    public ResponseEntity<List<DiseaseUser>> GetDiseaseUsers() {
+        List<DiseaseUser> _diseaseUsers = diseaseService.GetDiseaseUsers();
+        return ResponseEntity.status(HttpStatus.OK).body(_diseaseUsers);
     }
 }

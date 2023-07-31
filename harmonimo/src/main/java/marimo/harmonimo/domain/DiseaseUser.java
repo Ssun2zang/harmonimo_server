@@ -13,21 +13,19 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "disease_users")
-public class Disease_users {
+public class DiseaseUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "relationId")
     private Long relationId;
 
-    @ManyToMany
-    @JoinColumn(name="userId")
+    @ManyToOne
+    @JoinColumn(name = "userId")
     private User user;
 
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name = "diseaseId")
     private Disease disease;
-
-
 
     public Long getRelationId() {
         return relationId;

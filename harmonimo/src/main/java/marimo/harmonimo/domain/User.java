@@ -29,8 +29,8 @@ public class User {
     @Column(name = "profileImg")
     private String profileImg;
 
-    @Column(name = "id")
-    private String id;
+    @Column(name = "AccountId")
+    private String accountId;
 
     @Column(name = "password")
     private String password;
@@ -42,7 +42,7 @@ public class User {
         user.setGender(userDTO.getGender());
         user.setOld(userDTO.getOld());
         user.setProfileImg(userDTO.getProfileImg());
-        user.setId(userDTO.getId());
+        user.setAccountId(userDTO.getAccountId());
         user.setPassword(userDTO.getPassword());
         return user;
     }
@@ -95,12 +95,12 @@ public class User {
         this.profileImg = profileImg;
     }
 
-    public String getId() {
-        return id;
+    public String getAccountId() {
+        return accountId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setAccountId(String id) {
+        this.accountId = id;
     }
 
     public String getPassword() {

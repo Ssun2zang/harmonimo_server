@@ -16,17 +16,18 @@ public class UserDTO {
     private int gender;
     private int old;
     private String profileImg = "url1";
-    private String id;
+    private String accountId;
     private String password;
 
     public static UserDTO toUserDTO(User user){
         UserDTO userDTO = new UserDTO();
+        userDTO.setUserId(user.getUserId());
         userDTO.setName(user.getName());
         userDTO.setNickname(user.getNickname());
         userDTO.setGender(user.getGender());
         userDTO.setOld(user.getOld());
         userDTO.setProfileImg(user.getProfileImg());
-        userDTO.setId(user.getId());
+        userDTO.setAccountId(user.getAccountId());
         userDTO.setPassword(user.getPassword());
         return userDTO;
     }
@@ -79,12 +80,12 @@ public class UserDTO {
         this.profileImg = profileImg;
     }
 
-    public String getId() {
-        return id;
+    public String getAccountId() {
+        return accountId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setAccountId(String id) {
+        this.accountId = accountId;
     }
 
     public String getPassword() {
