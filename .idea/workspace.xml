@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57d8e974-13c3-4e97-baba-af59b01102bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/LogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/LogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Log/LogDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/MarimoDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/MarimoDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Log1.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Log1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Log2.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Log2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Log3.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Log3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Marimo.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Marimo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Log/LogSensorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Log/LogSensorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/LogService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,5 +156,20 @@
       <updated>1690437755506</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/MarimoDataController.java</url>
+          <line>26</line>
+          <properties class="marimo.harmonimo.controller.MarimoDataController" method="register">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

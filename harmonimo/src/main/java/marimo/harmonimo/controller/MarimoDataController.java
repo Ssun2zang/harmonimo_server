@@ -5,6 +5,7 @@ import marimo.harmonimo.dto.MarimoData.MarimoDataSensorDTO;
 import marimo.harmonimo.dto.User.UserDTO;
 import marimo.harmonimo.dto.User.UserRegisterDTO;
 import marimo.harmonimo.service.MarimoDataService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -17,13 +18,13 @@ import java.util.List;
 @RequestMapping( produces = "application/json;charset=utf8")
 public class MarimoDataController {
     private final MarimoDataService marimoDataService;
-
+    @Autowired
     public MarimoDataController(MarimoDataService marimoDataService) {
         this.marimoDataService = marimoDataService;
     }
 
     @PostMapping("/marimoData/sensor")
-    public  ResponseEntity<Boolean> register(@RequestBody MarimoDataSensorDTO marimoDataSensorDTO){
+    public  ResponseEntity<Boolean> postSensorData(@RequestBody MarimoDataSensorDTO marimoDataSensorDTO){
         marimoDataService.save(marimoDataSensorDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(true);
     }

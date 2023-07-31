@@ -1,0 +1,67 @@
+package marimo.harmonimo.dto.Log;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import marimo.harmonimo.domain.Log1;
+import marimo.harmonimo.domain.Log2;
+import marimo.harmonimo.domain.Log3;
+
+import java.time.LocalDateTime;
+
+@Data
+@NoArgsConstructor
+@ToString
+public class LogDTO {
+    private long logId;
+    private long mariomId;
+    private LocalDateTime timestamp;
+
+    public static LogDTO toLog1DTO(Log1 log1){
+        LogDTO logDTO = new LogDTO();
+        logDTO.setLogId(log1.getLogId());
+        logDTO.setMariomId(log1.getLogId());
+        logDTO.setTimestamp(log1.getTimestamp());
+        return logDTO;
+    }
+
+    public static LogDTO toLog2DTO(Log2 log2){
+        LogDTO logDTO = new LogDTO();
+        logDTO.setLogId(log2.getLogId());
+        logDTO.setMariomId(log2.getLogId());
+        logDTO.setTimestamp(log2.getTimestamp());
+        return logDTO;
+    }
+
+    public static LogDTO toLog3DTO(Log3 log3){
+        LogDTO logDTO = new LogDTO();
+        logDTO.setLogId(log3.getLogId());
+        logDTO.setMariomId(log3.getLogId());
+        logDTO.setTimestamp(log3.getTimestamp());
+        return logDTO;
+    }
+
+    public long getLogId() {
+        return logId;
+    }
+
+    public void setLogId(long logId) {
+        this.logId = logId;
+    }
+
+    public long getMariomId() {
+        return mariomId;
+    }
+
+    public void setMariomId(long mariomId) {
+        this.mariomId = mariomId;
+    }
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(LocalDateTime timestamp) {
+        this.timestamp = timestamp;
+    }
+}

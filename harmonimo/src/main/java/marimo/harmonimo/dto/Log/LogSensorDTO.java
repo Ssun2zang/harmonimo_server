@@ -9,4 +9,12 @@ import lombok.ToString;
 @ToString
 public class LogSensorDTO {
     private long marimoId;
+
+    public long getMarimoId() {
+        return marimoId;
+    }
+
+    public void setMarimoId(long marimoId) {
+        this.marimoId = marimoId;
+    }
 }

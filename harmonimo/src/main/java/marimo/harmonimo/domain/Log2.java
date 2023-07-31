@@ -28,4 +28,27 @@ public class Log2 {
     @Column
     private LocalDateTime timestamp;
 
+    public long getLogId() {
+        return logId;
+    }
+
+    public void setLogId(long logId) {
+        this.logId = logId;
+    }
+
+    public Marimo getMarimo() {
+        return marimo;
+    }
+
+    public void setMarimo(Marimo marimo) {
+        this.marimo = marimo;
+    }
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(LocalDateTime timestamp) {
+        this.timestamp = timestamp;
+    }
 }

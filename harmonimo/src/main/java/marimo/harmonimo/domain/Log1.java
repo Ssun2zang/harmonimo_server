@@ -3,6 +3,8 @@ package marimo.harmonimo.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import marimo.harmonimo.dto.Log.LogDTO;
+import marimo.harmonimo.dto.User.UserDTO;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -28,4 +30,28 @@ public class Log1 {
     @Column
     private LocalDateTime timestamp;
 
+
+    public long getLogId() {
+        return logId;
+    }
+
+    public void setLogId(long logId) {
+        this.logId = logId;
+    }
+
+    public Marimo getMarimo() {
+        return marimo;
+    }
+
+    public void setMarimo(Marimo marimo) {
+        this.marimo = marimo;
+    }
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(LocalDateTime timestamp) {
+        this.timestamp = timestamp;
+    }
 }
