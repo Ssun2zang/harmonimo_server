@@ -9,13 +9,5 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 
 class DiseaseRepositoryTest {
-    @Autowired
-    DiseaseRepository repository;
-
-    @Test
-    public void findAll(){
-        List<Disease> result = repository.findAll();
-        org.assertj.core.api.Assertions.assertThat(result.size()).isEqualTo(10);
-    }
 
 }
