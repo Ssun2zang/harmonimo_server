@@ -2,6 +2,7 @@ package marimo.harmonimo.service;
 
 import marimo.harmonimo.domain.User;
 import marimo.harmonimo.dto.User.UserDTO;
+import marimo.harmonimo.dto.User.UserLoginDTO;
 import marimo.harmonimo.dto.User.UserRegisterDTO;
 import marimo.harmonimo.repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -28,25 +29,22 @@ public class UserService {
         diseaseService.SetRelations(userEntity, userRegisterDTO.getDiseases());
     }
 
-//    public UserDTO login(UserDTO memberDTO){ //entity객체는 service에서만
-//        Optional<User> byUserEmail = userRepository.findBy(userDTO.getUserEmail());
-//        if(byUserEmail.isPresent()){
-//            // 조회 결과가 있다
-//            UserEntity userEntity = byUserEmail.get(); // Optional에서 꺼냄
-//            if(userEntity.getUserPassword().equals(userDTO.getUserPassword())) {
-//                //비밀번호 일치
-//                //entity -> dto 변환 후 리턴
-//                UserDTO dto = UserDTO.toUserDTO(userEntity);
-//                return dto;
-//            } else {
-//                //비밀번호 불일치
-//                return null;
-//            }
-//        } else {
-//            // 조회 결과가 없다
-//            return null;
-//        }
-//    }
+    public long login(UserLoginDTO user){
+        Optional<User> byAccountId = userRepository.findByAccountId(user.getAccountId());
+        if(byAccountId.isPresent()){
+            User userEntity = byAccountId.get();
+            if(userEntity.getPassword().equals(user.getPassword())) {
+                UserDTO dto = UserDTO.toUserDTO(userEntity);
+                return dto.getUserId();
+            } else {
+                //비밀번호 불일치
+                return -1;
+            }
+        } else {
+            // 조회 결과가 없다
+            return -1;
+        }
+    }
 
     public List<UserDTO> getUsers() { //entity객체는 service에서만
         List<User> users = userRepository.findAll();

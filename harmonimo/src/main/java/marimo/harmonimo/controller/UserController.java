@@ -1,6 +1,7 @@
 package marimo.harmonimo.controller;
 
 import marimo.harmonimo.dto.User.UserDTO;
+import marimo.harmonimo.dto.User.UserLoginDTO;
 import marimo.harmonimo.dto.User.UserRegisterDTO;
 import marimo.harmonimo.service.UserService;
 import org.springframework.stereotype.Controller;
@@ -23,7 +24,10 @@ public class UserController {
         return;
     }
 
-
+    @GetMapping("/login")
+    public long login(@RequestBody UserLoginDTO userLoginDTO){
+        return userService.login(userLoginDTO);
+    }
 
     @GetMapping("/users")
     public List<UserDTO> getUsers(@ModelAttribute UserDTO userDTO) {
