@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57d8e974-13c3-4e97-baba-af59b01102bf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/StatusCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserIdDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserLoginDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserLoginDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

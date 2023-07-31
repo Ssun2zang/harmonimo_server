@@ -2,6 +2,7 @@ package marimo.harmonimo.service;
 
 import marimo.harmonimo.domain.User;
 import marimo.harmonimo.dto.User.UserDTO;
+import marimo.harmonimo.dto.User.UserIdDTO;
 import marimo.harmonimo.dto.User.UserLoginDTO;
 import marimo.harmonimo.dto.User.UserRegisterDTO;
 import marimo.harmonimo.repository.UserRepository;
@@ -29,20 +30,22 @@ public class UserService {
         diseaseService.SetRelations(userEntity, userRegisterDTO.getDiseases());
     }
 
-    public long login(UserLoginDTO user){
+    public UserIdDTO login(UserLoginDTO user){
         Optional<User> byAccountId = userRepository.findByAccountId(user.getAccountId());
         if(byAccountId.isPresent()){
             User userEntity = byAccountId.get();
             if(userEntity.getPassword().equals(user.getPassword())) {
                 UserDTO dto = UserDTO.toUserDTO(userEntity);
-                return dto.getUserId();
+                UserIdDTO userIdDTO = new UserIdDTO();
+                userIdDTO.setUserId(dto.getUserId());
+                return userIdDTO;
             } else {
                 //비밀번호 불일치
-                return -1;
+                return null;
             }
         } else {
             // 조회 결과가 없다
-            return -1;
+            return null;
         }
     }
 

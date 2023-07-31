@@ -1,9 +1,11 @@
 package marimo.harmonimo.controller;
 
 import marimo.harmonimo.dto.User.UserDTO;
+import marimo.harmonimo.dto.User.UserIdDTO;
 import marimo.harmonimo.dto.User.UserLoginDTO;
 import marimo.harmonimo.dto.User.UserRegisterDTO;
 import marimo.harmonimo.service.UserService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,8 +27,14 @@ public class UserController {
     }
 
     @GetMapping("/login")
-    public long login(@RequestBody UserLoginDTO userLoginDTO){
-        return userService.login(userLoginDTO);
+    public ResponseEntity<UserIdDTO> login(@RequestBody UserLoginDTO userLoginDTO){  //userId DTO로변경
+        UserIdDTO loginResult = new UserIdDTO();
+        if (userService.login(userLoginDTO) != null) {
+            loginResult = userService.login(userLoginDTO);
+            return ResponseEntity.ok(userService.login(userLoginDTO));
+        } else{
+            return ResponseEntity.badRequest().body(loginResult);
+        }
     }
 
     @GetMapping("/users")
