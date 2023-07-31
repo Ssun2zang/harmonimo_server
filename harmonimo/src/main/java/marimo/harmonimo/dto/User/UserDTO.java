@@ -84,7 +84,7 @@ public class UserDTO {
         return accountId;
     }
 
-    public void setAccountId(String id) {
+    public void setAccountId(String accountId) {
         this.accountId = accountId;
     }
 

@@ -99,8 +99,8 @@ public class User {
         return accountId;
     }
 
-    public void setAccountId(String id) {
-        this.accountId = id;
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
     }
 
     public String getPassword() {

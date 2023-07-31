@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57d8e974-13c3-4e97-baba-af59b01102bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/repository/DiseaseUserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/DiseaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/DiseaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Disease_users.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/DiseaseUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserRegisterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserRegisterDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/DiseaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/DiseaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +44,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
