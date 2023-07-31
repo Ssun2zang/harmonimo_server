@@ -5,6 +5,7 @@ import marimo.harmonimo.dto.User.UserIdDTO;
 import marimo.harmonimo.dto.User.UserLoginDTO;
 import marimo.harmonimo.dto.User.UserRegisterDTO;
 import marimo.harmonimo.service.UserService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -21,9 +22,9 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public void register(@RequestBody UserRegisterDTO userRegisterDTO){
+    public ResponseEntity<Boolean> register(@RequestBody UserRegisterDTO userRegisterDTO){
         userService.save(userRegisterDTO);
-        return;
+        return ResponseEntity.ok(true);
     }
 
     @GetMapping("/login")
@@ -43,8 +44,8 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public List<UserDTO> getUsers(@ModelAttribute UserDTO userDTO) {
+    public ResponseEntity<List<UserDTO>> getUsers(@ModelAttribute UserDTO userDTO) {
         List<UserDTO> result = userService.getUsers();
-        return result;
+        return ResponseEntity.ok(result);
     }
 }
