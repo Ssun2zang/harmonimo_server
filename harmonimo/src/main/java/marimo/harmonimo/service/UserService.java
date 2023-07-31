@@ -49,6 +49,10 @@ public class UserService {
         }
     }
 
+    public boolean checkAccountIdDuplicate(String accountId){
+        return userRepository.existsByAccountId(accountId);
+    }
+
     public List<UserDTO> getUsers() { //entity객체는 service에서만
         List<User> users = userRepository.findAll();
         List<UserDTO> dtos = users.stream()

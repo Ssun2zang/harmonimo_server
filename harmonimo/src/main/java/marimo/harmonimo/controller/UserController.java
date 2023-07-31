@@ -37,6 +37,11 @@ public class UserController {
         }
     }
 
+    @GetMapping("/users/{accountId}/exist")
+    public ResponseEntity<Boolean> checkAccountIdDuplicate(@PathVariable String accountId){
+        return ResponseEntity.ok(userService.checkAccountIdDuplicate(accountId));
+    }
+
     @GetMapping("/users")
     public List<UserDTO> getUsers(@ModelAttribute UserDTO userDTO) {
         List<UserDTO> result = userService.getUsers();
