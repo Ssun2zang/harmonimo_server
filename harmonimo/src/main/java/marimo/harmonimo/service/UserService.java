@@ -35,9 +35,8 @@ public class UserService {
         if(byAccountId.isPresent()){
             User userEntity = byAccountId.get();
             if(userEntity.getPassword().equals(user.getPassword())) {
-                UserDTO dto = UserDTO.toUserDTO(userEntity);
                 UserIdDTO userIdDTO = new UserIdDTO();
-                userIdDTO.setUserId(dto.getUserId());
+                userIdDTO.setUserId(userEntity.getUserId());
                 return userIdDTO;
             } else {
                 //비밀번호 불일치

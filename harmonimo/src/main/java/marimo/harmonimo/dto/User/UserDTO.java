@@ -10,7 +10,6 @@ import marimo.harmonimo.domain.User;
 @NoArgsConstructor
 @ToString
 public class UserDTO {
-    private Long  userId;
     private String name;
     private String nickname;
     private int gender;
@@ -21,7 +20,6 @@ public class UserDTO {
 
     public static UserDTO toUserDTO(User user){
         UserDTO userDTO = new UserDTO();
-        userDTO.setUserId(user.getUserId());
         userDTO.setName(user.getName());
         userDTO.setNickname(user.getNickname());
         userDTO.setGender(user.getGender());
@@ -32,13 +30,6 @@ public class UserDTO {
         return userDTO;
     }
 
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
 
     public String getName() {
         return name;

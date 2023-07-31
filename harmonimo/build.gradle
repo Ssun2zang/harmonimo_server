@@ -24,6 +24,7 @@ dependencies {
 	implementation 'mysql:mysql-connector-java:8.0.32'
 
     testImplementation 'junit:junit:4.13.1'
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.6.9'
 
 }
 
