@@ -28,7 +28,10 @@ public class UserController {
     }
 
     @GetMapping("/login")
-    public ResponseEntity<UserIdDTO> login(@RequestBody UserLoginDTO userLoginDTO){  //userId DTO로변경
+    public ResponseEntity<UserIdDTO> login(@RequestParam String accountId, @RequestParam String password) {  //userId DTO로변경
+        UserLoginDTO userLoginDTO = new UserLoginDTO();
+        userLoginDTO.setAccountId(accountId);
+        userLoginDTO.setPassword(password);
         UserIdDTO loginResult = new UserIdDTO();
         if (userService.login(userLoginDTO) != null) {
             loginResult = userService.login(userLoginDTO);
