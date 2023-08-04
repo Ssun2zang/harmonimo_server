@@ -4,8 +4,8 @@ import marimo.harmonimo.dto.User.UserDTO;
 import marimo.harmonimo.dto.User.UserIdDTO;
 import marimo.harmonimo.dto.User.UserLoginDTO;
 import marimo.harmonimo.dto.User.UserRegisterDTO;
+import marimo.harmonimo.service.MarimoService;
 import marimo.harmonimo.service.UserService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +17,7 @@ import java.util.List;
 public class UserController {
     private final UserService userService;
 
-    public UserController(UserService userService) {
+    public UserController(UserService userService, MarimoService marimoService) {
         this.userService = userService;
     }
 
@@ -47,7 +47,7 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public ResponseEntity<List<UserDTO>> getUsers(@ModelAttribute UserDTO userDTO) {
+    public ResponseEntity<List<UserDTO>> getUsers() {
         List<UserDTO> result = userService.getUsers();
         return ResponseEntity.ok(result);
     }

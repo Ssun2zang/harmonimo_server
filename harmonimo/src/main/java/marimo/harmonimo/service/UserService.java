@@ -16,18 +16,22 @@ import java.util.stream.Collectors;
 public class UserService {
     private final UserRepository userRepository;
     private final DiseaseService diseaseService;
+    private final MarimoService marimoService;
 
-    public UserService(UserRepository userRepository, DiseaseService diseaseService) {
+    public UserService(UserRepository userRepository, DiseaseService diseaseService, MarimoService marimoService) {
         this.userRepository = userRepository;
         this.diseaseService = diseaseService;
+        this.marimoService = marimoService;
     }
 
     public void save(UserRegisterDTO userRegisterDTO) {
+
         User userEntity = User.toUserEntity(userRegisterDTO);
         userRepository.save(userEntity);
         Long userId = userEntity.getUserId();
 
         diseaseService.SetRelations(userEntity, userRegisterDTO.getDiseases());
+        marimoService.setMarimoUserRelation(userEntity.getAccountId(), userId);
     }
 
     public UserIdDTO login(UserLoginDTO user){

@@ -1,40 +1,32 @@
-package marimo.harmonimo.domain;
+package marimo.harmonimo.dto.Marimo;
 
-import lombok.Getter;
-import lombok.Setter;
-import marimo.harmonimo.dto.Marimo.MarimoDTO;
-
-import javax.persistence.*;
-
-@Entity
-@Getter
-@Setter
-@Table(name = "marimos")
-public class Marimo {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import marimo.harmonimo.domain.Marimo;
+@Data
+@NoArgsConstructor
+@ToString
+public class MarimoDTO {
     private long marimoId;
-
-    @Column
     private String name;
-
-    @OneToOne
-    @JoinColumn(name="userId")
-    private User user;
-
-    @Column
+    private long userId;
     private int deco1;
-
-    @Column
     private int deco2;
-
-    @Column
     private int deco3;
-
-    @Column
     private int emotion;
 
+    public static MarimoDTO ToMarimoDTO(Marimo marimo){
+        MarimoDTO marimoDTO = new MarimoDTO();
+        marimoDTO.setMarimoId(marimo.getMarimoId());
+        marimoDTO.setName(marimo.getName());
+        marimoDTO.setUserId(marimo.getUser().getUserId());
+        marimoDTO.setDeco1(marimo.getDeco1());
+        marimoDTO.setDeco2(marimo.getDeco2());
+        marimoDTO.setDeco3(marimo.getDeco3());
+        marimoDTO.setEmotion(marimo.getEmotion());
+        return marimoDTO;
+    }
 
     public long getMarimoId() {
         return marimoId;
@@ -52,12 +44,12 @@ public class Marimo {
         this.name = name;
     }
 
-    public User getUser() {
-        return user;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
     public int getDeco1() {

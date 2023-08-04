@@ -30,7 +30,7 @@ public class MarimoDataController {
     }
 
     @GetMapping("/marimoDatas")
-    public ResponseEntity<List<MarimoData>> getMarimoDatas(@ModelAttribute MarimoData marimoData) {
+    public ResponseEntity<List<MarimoData>> getMarimoDatas() {
         List<MarimoData> result = marimoDataService.getMarimoDatas();
         return ResponseEntity.ok(result);
     }
