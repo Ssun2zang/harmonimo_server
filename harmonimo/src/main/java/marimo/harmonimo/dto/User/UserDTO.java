@@ -14,7 +14,7 @@ public class UserDTO {
     private String nickname;
     private int gender;
     private int old;
-    private String profileImg = "url1";
+    private String profileImg = "http://ec2-3-39-175-221.ap-northeast-2.compute.amazonaws.com:8080/uploadImg/default.png";
     private String accountId;
     private String password;
 
