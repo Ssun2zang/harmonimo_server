@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import marimo.harmonimo.domain.Marimo;
+import marimo.harmonimo.domain.User;
+
 @Data
 @NoArgsConstructor
 @ToString
@@ -15,18 +17,30 @@ public class MarimoDTO {
     private int deco2;
     private int deco3;
     private int emotion;
-
     public static MarimoDTO ToMarimoDTO(Marimo marimo){
+        if (marimo == null) {
+            return null; // Handle the case where marimo is null
+        }
+
         MarimoDTO marimoDTO = new MarimoDTO();
         marimoDTO.setMarimoId(marimo.getMarimoId());
         marimoDTO.setName(marimo.getName());
-        marimoDTO.setUserId(marimo.getUser().getUserId());
+
+        User user = marimo.getUser();
+        if (user != null) {
+            marimoDTO.setUserId(user.getUserId());
+        } else {
+            marimoDTO.setUserId(-1); // Or any default value you want
+        }
+
         marimoDTO.setDeco1(marimo.getDeco1());
         marimoDTO.setDeco2(marimo.getDeco2());
         marimoDTO.setDeco3(marimo.getDeco3());
         marimoDTO.setEmotion(marimo.getEmotion());
+
         return marimoDTO;
     }
+
 
     public long getMarimoId() {
         return marimoId;
