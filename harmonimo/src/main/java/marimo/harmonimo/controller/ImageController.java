@@ -16,7 +16,7 @@ import java.nio.file.Paths;
 @RequestMapping(produces = "application/json;charset=utf8")
 public class ImageController {
 
-    private static final String UPLOAD_DIR = "uploadImg/";
+    private static final String UPLOAD_DIR = "static/uploadImg/";
 
     @PostMapping("/uploadImg")
     public ResponseEntity<UserImgDTO> uploadImage(@RequestParam("file") MultipartFile file) {
