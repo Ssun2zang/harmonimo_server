@@ -26,8 +26,9 @@ public class ImageController {
         }
 
         try {
-            String fileName = UUID.randomUUID().toString() + "_" + file.getOriginalFilename();
-            File saveFile = Paths.get(getClass().getClassLoader().getResource(UPLOAD_DIR).toURI()).resolve(fileName).toFile();
+            String absolutePath = "/home/ubuntu/.ssh/harmonimo_server/harmonimo/build/resources/main/static/uploadImg/";
+            File saveFile = Paths.get(absolutePath, fileName).toFile();
+
             file.transferTo(saveFile);
 
             String imageUrl = "http://ec2-3-39-175-221.ap-northeast-2.compute.amazonaws.com:8080/uploadImg/" + fileName;
