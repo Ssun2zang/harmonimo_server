@@ -11,13 +11,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Controller
 @RestController
 @RequestMapping( produces = "application/json;charset=utf8")
 public class MarimoDataController {
     private final MarimoDataService marimoDataService;
+
     @Autowired
     public MarimoDataController(MarimoDataService marimoDataService) {
         this.marimoDataService = marimoDataService;
@@ -34,4 +38,35 @@ public class MarimoDataController {
         List<MarimoData> result = marimoDataService.getMarimoDatas();
         return ResponseEntity.ok(result);
     }
+
+    @GetMapping("/marimoDatas/{userId}")
+    public ResponseEntity<List<MarimoDataSensorDTO>> getUserMarimoDatas(@PathVariable String userId) {
+        Long userIdValue = Long.valueOf(userId);
+        List<MarimoData> marimoDataList = marimoDataService.getAllMarimoDataByUserId(userIdValue);
+
+        List<MarimoDataSensorDTO> dtoList = new ArrayList<>();
+        for (MarimoData marimoData : marimoDataList) {
+            MarimoDataSensorDTO dto = MarimoDataSensorDTO.convertToDTO(marimoData);
+            dtoList.add(dto);
+        }
+
+        return ResponseEntity.ok(dtoList);
+    }
+
+    @GetMapping("/marimoDatas/recent/{userId}")
+    public ResponseEntity<MarimoDataSensorDTO> getUserMarimoRecentDatas(@PathVariable String userId) {
+        Long userIdValue = Long.valueOf(userId);
+        Optional<MarimoData> optionalMarimoData = marimoDataService.getMarimoDataByUserId(userIdValue);
+
+        if (optionalMarimoData.isPresent()) {
+            MarimoData marimoData = optionalMarimoData.get();
+            MarimoDataSensorDTO dto = MarimoDataSensorDTO.convertToDTO(marimoData);
+            return ResponseEntity.ok(dto);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
+
 }

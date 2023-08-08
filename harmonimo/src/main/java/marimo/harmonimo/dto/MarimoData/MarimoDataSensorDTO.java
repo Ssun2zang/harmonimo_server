@@ -1,6 +1,7 @@
 package marimo.harmonimo.dto.MarimoData;
 
 import lombok.*;
+import marimo.harmonimo.domain.MarimoData;
 
 @Data
 @NoArgsConstructor
@@ -10,6 +11,15 @@ public class MarimoDataSensorDTO {
     private int stat1;
     private int stat2;
     private int stat3;
+
+    public static MarimoDataSensorDTO convertToDTO(MarimoData marimoData) {
+        MarimoDataSensorDTO dto = new MarimoDataSensorDTO();
+        dto.setMarimoId(marimoData.getMarimo().getMarimoId());
+        dto.setStat1((int) marimoData.getStat1());
+        dto.setStat2((int) marimoData.getStat2());
+        dto.setStat3((int) marimoData.getStat3());
+        return dto;
+    }
 
     public long getMarimoId() {
         return marimoId;
