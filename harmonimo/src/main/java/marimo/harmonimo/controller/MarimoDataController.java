@@ -2,6 +2,7 @@ package marimo.harmonimo.controller;
 
 import marimo.harmonimo.domain.MarimoData;
 import marimo.harmonimo.dto.MarimoData.MarimoDataSensorDTO;
+import marimo.harmonimo.dto.MarimoData.MarimoDataSensorTimeDTO;
 import marimo.harmonimo.dto.User.UserDTO;
 import marimo.harmonimo.dto.User.UserRegisterDTO;
 import marimo.harmonimo.service.MarimoDataService;
@@ -34,10 +35,18 @@ public class MarimoDataController {
     }
 
     @GetMapping("/marimoDatas")
-    public ResponseEntity<List<MarimoData>> getMarimoDatas() {
-        List<MarimoData> result = marimoDataService.getMarimoDatas();
-        return ResponseEntity.ok(result);
+    public ResponseEntity<List<MarimoDataSensorTimeDTO>> getMarimoDatas() {
+        List<MarimoData> marimoDataList = marimoDataService.getMarimoDatas();
+
+        List<MarimoDataSensorTimeDTO> dtoList = new ArrayList<>();
+        for (MarimoData marimoData : marimoDataList) {
+            MarimoDataSensorTimeDTO dto = MarimoDataSensorTimeDTO.convertToDTO(marimoData);
+            dtoList.add(dto);
+        }
+
+        return ResponseEntity.ok(dtoList);
     }
+
 
     @GetMapping("/marimoDatas/{userId}")
     public ResponseEntity<List<MarimoDataSensorDTO>> getUserMarimoDatas(@PathVariable String userId) {
