@@ -3,6 +3,7 @@ package marimo.harmonimo.service;
 import marimo.harmonimo.domain.*;
 import marimo.harmonimo.dto.Log.LogDTO;
 import marimo.harmonimo.dto.Log.LogSensorDTO;
+import marimo.harmonimo.dto.Log.UserLogDTO;
 import marimo.harmonimo.dto.User.UserDTO;
 import marimo.harmonimo.repository.Log1Repository;
 import marimo.harmonimo.repository.Log2Repository;
@@ -11,6 +12,7 @@ import marimo.harmonimo.repository.MarimoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -70,6 +72,23 @@ public class LogService {
                 .map(LogDTO::toLog3DTO) // Using method reference
                 .collect(Collectors.toList());
         return dtos;
+    }
+
+    public UserLogDTO getLatestLogByUserId(Long userId) {
+        UserLogDTO dto = new UserLogDTO();
+
+        Optional<Marimo> byUserId = marimoRepository.findByUserUserId(userId);
+        byUserId.ifPresent(marimo -> dto.setMarimoId(marimo.getMarimoId()));
+
+        Optional<Log1> latestLog1 = log1Repository.findLatestLogByUserId(userId);
+        latestLog1.ifPresent(log1 -> dto.setLog1(log1.getTimestamp()));
+
+        Optional<Log2> latestLog2 = log2Repository.findLatestLogByUserId(userId);
+        latestLog2.ifPresent(log2 -> dto.setLog2(log2.getTimestamp()));
+
+        Optional<Log3> latestLog3 = log3Repository.findLatestLogByUserId(userId);
+        latestLog3.ifPresent(log3 -> dto.setLog3(log3.getTimestamp()));
+        return dto;
     }
 
 }

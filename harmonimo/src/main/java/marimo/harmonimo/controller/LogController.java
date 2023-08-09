@@ -3,6 +3,7 @@ package marimo.harmonimo.controller;
 import marimo.harmonimo.domain.MarimoData;
 import marimo.harmonimo.dto.Log.LogDTO;
 import marimo.harmonimo.dto.Log.LogSensorDTO;
+import marimo.harmonimo.dto.Log.UserLogDTO;
 import marimo.harmonimo.dto.MarimoData.MarimoDataSensorDTO;
 import marimo.harmonimo.service.LogService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +57,9 @@ public class LogController {
         return ResponseEntity.ok(result);
     }
 
-
-
+    @GetMapping("/logs/user/{userId}")
+    public ResponseEntity<UserLogDTO> getUserLogDTOs(@PathVariable String userId) {
+        UserLogDTO result = logService.getLatestLogByUserId(Long.valueOf(userId));
+        return ResponseEntity.ok(result);
+    }
 }
