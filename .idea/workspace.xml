@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="57d8e974-13c3-4e97-baba-af59b01102bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/MarimoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/MarimoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Marimo/MarimoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Marimo/MarimoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/MarimoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/MarimoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Log/LogDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Log/LogDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +26,12 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="harmonimo" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -101,7 +104,7 @@
       <recent name="marimo.harmonimo.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.HarmonimoApplication">
+  <component name="RunManager" selected="Application.HarmonimoApplication">
     <configuration name="HarmonimoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="marimo.harmonimo.HarmonimoApplication" />
       <module name="harmonimo.main" />
@@ -136,7 +139,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <recent_temporary>

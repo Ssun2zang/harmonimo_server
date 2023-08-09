@@ -20,7 +20,7 @@ public class LogDTO {
     public static LogDTO toLog1DTO(Log1 log1){
         LogDTO logDTO = new LogDTO();
         logDTO.setLogId(log1.getLogId());
-        logDTO.setMariomId(log1.getLogId());
+        logDTO.setMariomId(log1.getMarimo().getMarimoId());
         logDTO.setTimestamp(log1.getTimestamp());
         return logDTO;
     }
@@ -28,7 +28,7 @@ public class LogDTO {
     public static LogDTO toLog2DTO(Log2 log2){
         LogDTO logDTO = new LogDTO();
         logDTO.setLogId(log2.getLogId());
-        logDTO.setMariomId(log2.getLogId());
+        logDTO.setMariomId(log2.getMarimo().getMarimoId());
         logDTO.setTimestamp(log2.getTimestamp());
         return logDTO;
     }
@@ -36,7 +36,7 @@ public class LogDTO {
     public static LogDTO toLog3DTO(Log3 log3){
         LogDTO logDTO = new LogDTO();
         logDTO.setLogId(log3.getLogId());
-        logDTO.setMariomId(log3.getLogId());
+        logDTO.setMariomId(log3.getMarimo().getMarimoId());
         logDTO.setTimestamp(log3.getTimestamp());
         return logDTO;
     }
