@@ -2,15 +2,13 @@ package marimo.harmonimo.controller;
 
 import marimo.harmonimo.domain.Marimo;
 import marimo.harmonimo.dto.Marimo.MarimoDTO;
+import marimo.harmonimo.dto.Marimo.MarimoDecoEmotionDTO;
 import marimo.harmonimo.dto.Marimo.MarimoIdDTO;
 import marimo.harmonimo.dto.User.UserDTO;
 import marimo.harmonimo.service.MarimoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -43,5 +41,17 @@ public class MarimoController {
     public ResponseEntity<List<MarimoDTO>> getUsers() {
         List<MarimoDTO> result = marimoService.getALLMarimo();
         return ResponseEntity.ok(result);
+    }
+
+    @PutMapping("/marimo/{userId}")
+    public ResponseEntity<Boolean> updateMarimo(
+            @PathVariable long userId,
+            @RequestBody MarimoDecoEmotionDTO updatedMarimo) {
+        boolean updated = marimoService.updateMarimo(userId, updatedMarimo);
+        if (updated) {
+            return ResponseEntity.ok(true);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }

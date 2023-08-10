@@ -14,8 +14,10 @@ public class SpringConfig {
     private final Log3Repository log3Repository;
     private final MarimoRepository marimoRepository;
 
+    private final BoardRepository boardRepository;
+
     @Autowired
-    public SpringConfig(UserRepository userRepository, DiseaseRepository diseaseRepository, DiseaseUserRepository diseaseUserRepository, MarimoDataRepository marimoDataRepository, Log1Repository log1Repository, Log2Repository log2Repository, Log3Repository log3Repository, MarimoRepository marimoRepository) {
+    public SpringConfig(UserRepository userRepository, DiseaseRepository diseaseRepository, DiseaseUserRepository diseaseUserRepository, MarimoDataRepository marimoDataRepository, Log1Repository log1Repository, Log2Repository log2Repository, Log3Repository log3Repository, MarimoRepository marimoRepository, BoardRepository boardRepository) {
         this.userRepository = userRepository;
         this.diseaseRepository = diseaseRepository;
         this.diseaseUserRepository = diseaseUserRepository;
@@ -24,6 +26,7 @@ public class SpringConfig {
         this.log2Repository = log2Repository;
         this.log3Repository = log3Repository;
         this.marimoRepository = marimoRepository;
+        this.boardRepository = boardRepository;
     }
 
 }

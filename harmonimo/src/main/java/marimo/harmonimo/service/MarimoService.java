@@ -3,6 +3,7 @@ package marimo.harmonimo.service;
 import marimo.harmonimo.domain.Marimo;
 import marimo.harmonimo.domain.User;
 import marimo.harmonimo.dto.Marimo.MarimoDTO;
+import marimo.harmonimo.dto.Marimo.MarimoDecoEmotionDTO;
 import marimo.harmonimo.dto.User.UserDTO;
 import marimo.harmonimo.dto.User.UserIdDTO;
 import marimo.harmonimo.repository.MarimoRepository;
@@ -67,6 +68,21 @@ public class MarimoService {
                 .map(MarimoDTO::ToMarimoDTO) // Using method reference
                 .collect(Collectors.toList());
         return dtos;
+    }
+
+    public boolean updateMarimo(long userId, MarimoDecoEmotionDTO updatedMarimo) {
+        Optional<Marimo> optionalMarimo = marimoRepository.findByUserUserId(userId);
+        if (optionalMarimo.isPresent()) {
+            Marimo marimo = optionalMarimo.get();
+            marimo.setDeco1(updatedMarimo.getDeco1());
+            marimo.setDeco2(updatedMarimo.getDeco2());
+            marimo.setDeco3(updatedMarimo.getDeco3());
+            marimo.setEmotion(updatedMarimo.getEmotion());
+            marimoRepository.save(marimo);
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
