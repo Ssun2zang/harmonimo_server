@@ -91,4 +91,28 @@ public class LogService {
         return dto;
     }
 
+    public List<LogDTO> getLogs1ByUserId(Long userId){
+        List<Log1> logs = log1Repository.findLog1ByMarimoUserUserId(userId);
+        List<LogDTO> dtos = logs.stream()
+                .map(LogDTO::toLog1DTO) // Using method reference
+                .collect(Collectors.toList());
+        return dtos;
+    }
+
+    public List<LogDTO> getLogs2ByUserId(Long userId){
+        List<Log2> logs = log2Repository.findLog2ByMarimoUserUserId(userId);
+        List<LogDTO> dtos = logs.stream()
+                .map(LogDTO::toLog2DTO) // Using method reference
+                .collect(Collectors.toList());
+        return dtos;
+    }
+
+    public List<LogDTO> getLogs3ByUserId(Long userId){
+        List<Log3> logs = log3Repository.findLog3ByMarimoUserUserId(userId);
+        List<LogDTO> dtos = logs.stream()
+                .map(LogDTO::toLog3DTO) // Using method reference
+                .collect(Collectors.toList());
+        return dtos;
+    }
+
 }
