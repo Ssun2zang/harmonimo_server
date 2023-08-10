@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57d8e974-13c3-4e97-baba-af59b01102bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/BoardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Marimo/MarimoDecoEmotionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/repository/BoardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/BoardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Board/BoardDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Board/BoardIdDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/MarimoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/MarimoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/MarimoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/MarimoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/BoardService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
