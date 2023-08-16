@@ -80,13 +80,13 @@ public class LogService {
         Optional<Marimo> byUserId = marimoRepository.findByUserUserId(userId);
         byUserId.ifPresent(marimo -> dto.setMarimoId(marimo.getMarimoId()));
 
-        Optional<Log1> latestLog1 = log1Repository.findLatestLogByUserId(userId);
+        Optional<Log1> latestLog1 = log1Repository.findTopByMarimoUserUserIdOrderByTimestampDesc(userId);
         latestLog1.ifPresent(log1 -> dto.setLog1(log1.getTimestamp()));
 
-        Optional<Log2> latestLog2 = log2Repository.findLatestLogByUserId(userId);
+        Optional<Log2> latestLog2 = log2Repository.findTopByMarimoUserUserIdOrderByTimestampDesc(userId);
         latestLog2.ifPresent(log2 -> dto.setLog2(log2.getTimestamp()));
 
-        Optional<Log3> latestLog3 = log3Repository.findLatestLogByUserId(userId);
+        Optional<Log3> latestLog3 = log3Repository.findTopByMarimoUserUserIdOrderByTimestampDesc(userId);
         latestLog3.ifPresent(log3 -> dto.setLog3(log3.getTimestamp()));
         return dto;
     }
