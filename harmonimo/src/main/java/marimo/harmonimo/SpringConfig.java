@@ -1,7 +1,14 @@
 package marimo.harmonimo;
+
 import marimo.harmonimo.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+
+import javax.annotation.PostConstruct;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @Configuration
 public class SpringConfig {
@@ -13,7 +20,6 @@ public class SpringConfig {
     private final Log2Repository log2Repository;
     private final Log3Repository log3Repository;
     private final MarimoRepository marimoRepository;
-
     private final BoardRepository boardRepository;
 
     @Autowired
@@ -29,4 +35,15 @@ public class SpringConfig {
         this.boardRepository = boardRepository;
     }
 
+    private String uploadDir = System.getProperty("user.home") + "/static/uploadRec"; // 디폴트 경로 설정
+
+    @PostConstruct
+    public void init() {
+        Path uploadPath = Paths.get(uploadDir);
+        try {
+            Files.createDirectories(uploadPath);
+        } catch (IOException e) {
+            throw new RuntimeException("Could not create upload directory!");
+        }
+    }
 }

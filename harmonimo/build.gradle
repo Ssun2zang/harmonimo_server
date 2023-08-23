@@ -26,6 +26,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
 	implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.6.9'
 
+	annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
 }
 
 tasks.named('test') {
