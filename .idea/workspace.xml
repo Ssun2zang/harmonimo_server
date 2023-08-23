@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57d8e974-13c3-4e97-baba-af59b01102bf" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/VoiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserRecDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/resources/static/uploadImg/1045c3fd-bea9-4d2b-b118-6c728548d1e8_8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/resources/static/uploadRec/5ed759de-5656-45a2-a1ab-9afd2f58fdde_SAMPLE_1.MP3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/resources/static/uploadRec/9c83749d-efeb-467e-b214-08219ba4edc0_SAMPLE_1.MP3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/resources/static/uploadRec/cb3ae883-76d5-484f-860e-94e91c31144e_SAMPLE_1.MP3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/resources/static/uploadRec/ddb0462c-1e45-4cb3-a903-d238de28252c_SAMPLE_1.MP3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/RecordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Record.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Record/RecordDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Record/RecordSendDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/repository/RecordRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/RecordService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserRegisterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/User/UserRegisterDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/ddl1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/ddl1.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

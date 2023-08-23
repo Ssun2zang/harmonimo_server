@@ -100,3 +100,11 @@ CREATE TABLE IF NOT EXISTS disease_users (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 
+CREATE TABLE IF NOT EXISTS records (
+    record_id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    sender_id INTEGER,
+    receiver_id INTEGER,
+    url VARCHAR(255),
+    FOREIGN KEY (sender_id) REFERENCES users(user_id),
+    FOREIGN KEY (receiver_id) REFERENCES users(user_id)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
