@@ -20,7 +20,7 @@ import java.util.UUID;
 @RestController
 public class VoiceController {
 
-    private static final String UPLOAD_DIR = "harmonimo/src/main/resources/static/uploadRec/";
+    private static final String UPLOAD_DIR = "../../../src/main/resources/static/uploadImg/";
 
     @PostMapping("/uploadRec")
     public ResponseEntity<UserRecDTO> uploadRecording(@RequestParam("recording") MultipartFile file) {
