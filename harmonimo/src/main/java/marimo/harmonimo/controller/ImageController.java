@@ -15,7 +15,7 @@ import java.util.UUID;
 @RequestMapping(produces = "application/json;charset=utf8")
 public class ImageController {
 
-    private static final String UPLOAD_DIR = "../../src/main/resources/static/uploadImg/";
+    private static final String UPLOAD_DIR = "../resources/main/static/uploadImg";
 
     @PostMapping("/uploadImg")
     public ResponseEntity<UserImgDTO> uploadImage(@RequestParam("file") MultipartFile file) {
