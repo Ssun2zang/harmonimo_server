@@ -20,7 +20,7 @@ import java.util.UUID;
 @RestController
 public class VoiceController {
 
-    private static final String UPLOAD_DIR = "../resources/main/static/uploadRec/";
+    private static final String UPLOAD_DIR = "../../src/main/resources/static/uploadRec/";
 
     @PostMapping("/uploadRec")
     public ResponseEntity<UserRecDTO> uploadRecording(@RequestParam("recording") MultipartFile file) {
