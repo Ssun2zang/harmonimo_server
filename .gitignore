@@ -1,2 +1,7 @@
-
+.idea
+.gradle
+/build
+/out
+/src/main/resources/application-security.yml
 .idea/workspace.xml
+harmonimo/src/main/resources/application-security.yml

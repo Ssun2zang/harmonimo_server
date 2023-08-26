@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57d8e974-13c3-4e97-baba-af59b01102bf" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/RecordController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/domain/Record.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Record/RecordDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/dto/Record/RecordSendDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/repository/RecordRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/service/RecordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/AwsS3Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/S3UploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/controller/S3Uploader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harmonimo/src/main/resources/application-security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/java/marimo/harmonimo/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/ddl1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/ddl1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonimo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/harmonimo/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
